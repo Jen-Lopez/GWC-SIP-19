@@ -11,4 +11,4 @@ This python script will randomly generate an icebreaker question that is read-in
 Note: Other key inputs will be ignored. 
 
 ###### Need to finish: :bangbang: 
-- [ ] If there are more students than there are q's, need to notify and reset list that records q's that have been answered
+- [ ] If there are more students than there are q's, need to notify user and reset list that records q's that have been answered
