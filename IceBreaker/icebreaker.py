@@ -24,6 +24,7 @@ def res():
             break
 
 # ---------------------- MAIN PROGRAM ----------------------
+count = 0  #records num of q's answered
 
 while (True):
     try: #exception raised if input is not number
@@ -32,15 +33,17 @@ while (True):
     except Exception as e:
         print ("Not a number! Try again.")
 
-count = 0  #records num of q's answered
-
 while (True):
     uin = input()
     if (uin == ""): #if you press enter, empty string
-        count +=1
         res() #function called to generate/print question
+        count +=1 #keeps track of how many q's were answered
     elif (uin == "q"):
         print("\nquitting...")
         break
     else:
         print ("unknown key")
+
+
+#things needed to do:
+    # Include students by either stopping until students = count or resetting list if there are more students than q's
