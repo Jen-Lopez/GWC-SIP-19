@@ -24,26 +24,65 @@ def res():
             break
 
 # ---------------------- MAIN PROGRAM ----------------------
-count = 0  #records num of q's answered
+iter = 0
+ice_len = len(data)
 
 while (True):
     try: #exception raised if input is not number
         studs = int(input ("\nHow many students are there? "))
+        if not studs > 0:
+            print ("There can't be no students!") # can only be positive
+            continue
         break
     except Exception as e:
         print ("Not a number! Try again.")
 
 while (True):
+    iter += 1
+
+    if iter > ice_len: # runs if there are more students than questions; resetting necessary
+        print("\nThere are no more icebreaker questions.")
+        while True:
+
+            rep = input ("\nWant to repeat? (y/n) ")
+            if (rep.isalpha() and (rep == "y" or rep == "n")):
+                rep.lower()
+                break
+            else:
+                print ("Try Again.\n")
+                continue
+        if rep == "y":
+            print ("\nresetting...")
+            del called[:]
+            iter = 0
+            continue
+        elif rep == "n":
+            print("\nquitting...\n")
+            break
+
+    if iter > studs: # asks if you want to continue once you reach x q's for x students
+        while True:
+            ans = input ("\nMore questions? (y/n) ")
+            if ans.isalpha() and (ans == "y" or ans == "n"):
+                ans = ans.lower()
+                break
+            else:
+                print ("Try Again.")
+                continue
+        if ans == "y":
+            iter = 0
+            print ("\ngenerating...")
+        elif ans == "n":
+            print("\nquitting...\n")
+            break
+
     uin = input()
     if (uin == ""): #if you press enter, empty string
         res() #function called to generate/print question
-        count +=1 #keeps track of how many q's were answered
+
     elif (uin == "q"):
-        print("\nquitting...")
+        print("\nquitting...\n")
         break
     else:
-        print ("unknown key")
-
-
-#things needed to do:
-    # Include students by either stopping until students = count or resetting list if there are more students than q's
+        iter -= 1
+        print ("unknown key\n")
