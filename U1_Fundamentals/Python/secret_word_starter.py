@@ -29,21 +29,26 @@ while fails < maxfails: # this code runs until we reach 7 maxfails
                 break
             else:
                 print ("Incorrect word!\n")
-                fails +=1 # increases failed attempts
+                fails += 1 # increases failed attempts
                 continue
         else: # if res is "n" or anything else, return to beginning
             print()
             continue
 
-	# avoids non-letters, more than one letter, duplicate letters
-    if not(guess.isalpha()) or len(guess) > 1 or (guess in guesses):
+    try:
+        guess = guess.lower()
+        if len(guess) > 1 or (guess in guesses):
+            raise Exception('Invalid Guess!')
+    except Exception as e:
         print("Invalid Input!\n")
         continue
-    else:
-        guesses.append(guess) # adds user input to list of guesses in order to avoid duplicates
-        for i in range (len(word)):
-            if (word[i] == guess): # updates the underscores to correct letters
-                current_word[i] = guess
+
+	# avoids non-letters, more than one letter, duplicate letters
+
+    guesses.append(guess) # adds user input to list of guesses in order to avoid duplicates
+    for i in range (len(word)):
+        if (word[i] == guess): # updates the underscores to correct letters
+            current_word[i] = guess
 
     if ("_" not in current_word): # if user inputted all letters correctly, win game
         won = True

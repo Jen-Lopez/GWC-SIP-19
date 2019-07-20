@@ -8,7 +8,7 @@
 import random
 food_list = ["apple", "banana", "chocolate cake", "pizza","quiche", "taco", "cereal","donuts","cherries", "nuggets"]
 
-word = random.choice(food_list)
+word = (random.choice(food_list)).lower()
 
 intro = """
 Hello! Welcome to Guess The Secret Word.
@@ -32,14 +32,15 @@ while guesses < 8:
     print ("Letters Used: ", said_letters)
     print ("Word:",secret_word)
     user_letter = input ("Enter a letter (or '1' to solve): ")
-    if not(user_letter.isalpha() or user_letter == "1"):
-        print ("\nInvalid input. Only letters or '1' to solve!")
+
+    if not( (user_letter.isalpha() and len(user_letter) == 1) or user_letter == "1" ):
+        print ("\nInvalid input. Only single letter or '1' to solve!")
         continue
 
     if user_letter == "1":
-        res = input ("\nDo you want to solve? (y/n) ")
+        res = (input ("\nDo you want to solve? (y/n) ")).lower()
         if res == "y":
-            guess = input ("\nWhat's the word? ")
+            guess = (input ("\nWhat's the word? ")).lower()
             if guess == word:
                 print ("\nCongratulations. You Won!\n")
                 solved = True
@@ -54,8 +55,10 @@ while guesses < 8:
             print ("Unacceptable input.\n")
             continue
 
+    user_letter = user_letter.lower()
     if user_letter not in said_letters:
         said_letters.append(user_letter)
+
     else:
         print ("\nThis letter has already been said!\n")
         continue
