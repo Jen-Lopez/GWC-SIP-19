@@ -14,3 +14,5 @@
 2. So You Think You've Got Moves
 3. Adventure Game
 4. Maze Game
+5. Code Along: Cat Bumping Bat
+6. Code Along: Paddle Game
