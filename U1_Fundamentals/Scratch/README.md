@@ -15,12 +15,8 @@
    - Students will create a dance competition show game that enables user interactivity
    - This project allows students to practice using loops, costumes, and variables
    
-3. Adventure Game
-
-4. Maze Game
-
-5. [Code Along: Cat Bumping Bat](https://scratch.mit.edu/projects/320380902/) :cat2:
+3. [Code Along: Cat Bumping Bat](https://scratch.mit.edu/projects/320380902/) :cat2:
    - Code Along with Students to go over learned concepts
 
-6. [Code Along: Paddle Game](https://scratch.mit.edu/projects/320655536/) :tennis:
+4. [Code Along: Paddle Game](https://scratch.mit.edu/projects/320655536/) :tennis:
    - Code Along with Students to go over learned concepts
