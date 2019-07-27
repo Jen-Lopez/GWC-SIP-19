@@ -1,6 +1,5 @@
 import json
 
-
 survey = ["What is your name?","Where do you live?","Do you have a pet? If so, what kind?","What is your favorite movie?","Favorite place to go to?","Most Frequently Used App?"]
 keys = ["name","home", "pets","movie","place", "app"]
 all_answers = []
@@ -47,9 +46,3 @@ def num_responses():
 
 print("~~ Statistics ~~")
 print ("Number of responses: %d\n" %(num_responses()))
-
-# print some stats~
-# how many responses?
-# who live in the same city?
-# same pets
-# fav movie
