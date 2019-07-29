@@ -6,7 +6,6 @@ import matplotlib.pyplot as plot
 import numpy as np
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 
-
 # search query
 query = 'automation'
 
@@ -21,8 +20,9 @@ twitter_mask = np.array(Image.open('twitter.png').convert("RGBA"))
 # concatenate all tweets into single string
 entire_thing = ""
 for line in all_tweets:
-    result = re.sub(r"http\S+", "", line['text'])
-    entire_thing += result
+    first_result = re.sub(r"http\S+", "", line['text']) # filter out links
+    sec_result = re.sub(r"@\S+","", first_result) # filter out user @
+    entire_thing += sec_result
 
 # create dictionary where "word": "frequency"
 word_freq_dict = {}
@@ -43,7 +43,6 @@ for word in tb_obj.words:
     if not word.isalpha():
         continue
     word_freq_dict[word.lower()] = tb_obj.word_counts[word.lower()]
-
 
 # create cloud based on frequency
 print ("...Generating WordCloud...\n")
