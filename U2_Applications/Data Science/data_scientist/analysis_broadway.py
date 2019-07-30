@@ -9,6 +9,7 @@ import numpy as np
 broadway =  broadway.get_shows()
 
 # Year, name,gross, attendance
+
 theaters = []
 theater_dict = {}
 filtered_broadway = []
@@ -48,14 +49,15 @@ for s in filtered_broadway:
     showinfo['profit'] = profit
     showinfo['attendance'] = attendance
 
-
     if (show not in theater_dict[theater]):
         theater_dict[theater][show] = showinfo
     else:
         theater_dict[theater][show]['profit'] += profit
         theater_dict[theater][show]['attendance'] += attendance
 
-# iterates throught each
+# iterates throught each movie theater to find the most profitable show
+most_profitable = []
+
 for theater in theater_dict:
     movie_set = {}
     info_set= {}
@@ -74,6 +76,7 @@ for theater in theater_dict:
 theater_show_label = []
 profit = []
 
+# lists for graph
 print("The most profitable shows per Theatre:\n")
 for line in most_profitable:
     for key in line:
