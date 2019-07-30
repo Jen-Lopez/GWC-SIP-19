@@ -55,7 +55,7 @@ for s in filtered_broadway:
         theater_dict[theater][show]['profit'] += profit
         theater_dict[theater][show]['attendance'] += attendance
 
-# iterates throught each movie theater to find the most profitable show
+# iterates through each movie theater to find the most profitable show
 most_profitable = []
 
 for theater in theater_dict:
