@@ -9,7 +9,6 @@ import numpy as np
 broadway =  broadway.get_shows()
 
 # Year, name,gross, attendance
-
 theaters = []
 theater_dict = {}
 filtered_broadway = []
@@ -57,7 +56,6 @@ for s in filtered_broadway:
         theater_dict[theater][show]['attendance'] += attendance
 
 # iterates throught each
-most_profitable = []
 for theater in theater_dict:
     movie_set = {}
     info_set= {}
