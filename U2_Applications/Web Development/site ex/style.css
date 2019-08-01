@@ -1,0 +1,89 @@
+* {
+  font-family: 'Fira Code', monospace;
+  color: grey;
+}
+
+body {
+  background-color: #e3c6f0;
+}
+
+.center{
+  text-align: center;
+}
+
+#oop {
+    border-radius: 100px;
+    border: 3px black solid;
+    margin: 20px 0px;
+    visibility: hidden;
+}
+
+.fade {
+    animation: fadein 2s ease-in;
+}
+
+.head {
+  font-size: 3em;
+  padding-top: 30px;
+}
+
+.sub {
+  margin: 30px auto;
+}
+
+p {
+    text-align:  center;
+    margin: 0px 30px;
+}
+
+.para{
+  padding-bottom:50px;
+}
+
+#button {
+    display: block;
+    padding-bottom: 30px;
+}
+
+#button button {
+    font-size: 25px;
+    background-color: antiquewhite;
+    padding:5px;
+}
+
+#button button:hover {
+    color: lightcoral;
+}
+
+#rolled {
+   padding-bottom: 25px;
+    display: none;
+}
+
+.slideshow{
+    text-align: center;
+    padding-bottom: 20px;
+    margin: 0px 20px;
+}
+
+#myPic {
+    border-radius: 10px;
+    max-width:100%;
+    max-height:100%;
+    border: 5px white solid;
+}
+
+#myPic:hover{
+    opacity: .8;
+}
+
+#myPhoto{
+  width: 500px;
+  height: 400px;
+}
+
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
