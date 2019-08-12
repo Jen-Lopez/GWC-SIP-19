@@ -1,0 +1,48 @@
+/*CUSTOM CSS*/
+.no-style {
+    list-style: none;
+}
+
+nav{
+    height: 100px;
+}
+
+.nav-link{
+    font-size:30px;
+    color:white!important;
+}
+
+.nav-link:hover{
+    color: #ecc1bb!important;
+    cursor:pointer;
+}
+
+body{
+    background-color:#dba797;
+    font-family: 'Roboto', sans-serif;
+}
+
+.col-sm h1{
+    margin-top: 20px;
+}
+.active {
+    background-color: #986960;
+    border-radius: 20px;
+    padding:3px;
+}
+
+.active a{
+    color: #492f2f !important;
+}
+
+.jumbotron{
+    background-color: #eccfcf;
+}
+
+.jumbotron p{
+    color: #946161;
+}
+
+.jumbotron h1 {
+    color: #540000;   
+}
