@@ -46,3 +46,7 @@ body{
 .jumbotron h1 {
     color: #540000;   
 }
+
+.navbar-nav{
+    flex-direction: row;
+}

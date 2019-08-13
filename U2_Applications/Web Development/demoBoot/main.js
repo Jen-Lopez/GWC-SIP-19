@@ -1,3 +1,4 @@
+// ACTIVE NAVBAR STATES
 var currActive = document.getElementsByClassName("active");
 
 var navLinks = document.getElementById("navBar").getElementsByTagName("li");
